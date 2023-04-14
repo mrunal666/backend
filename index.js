@@ -200,7 +200,6 @@ app.post("/pay", verifyToken, async (req, res) => {
       name,
       address,
     } = req.body;
-    console.log(req.body);
     // Create a new customer
     const customer = await stripe.customers.create({
       email: email,
